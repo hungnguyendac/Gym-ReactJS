@@ -18,6 +18,10 @@
     z-index: 9999999;
 }
 
+.overlay.overshow {
+    display: block;
+}
+
 /* CSS để làm mờ nội dung trang */
 .blur {
     filter: blur(5px);
@@ -33,6 +37,10 @@
     position: fixed;
     z-index: 9999999;
     display: none;
+}
+
+.close-moblie.close-show {
+    display: block;
 }
 
 .close-moblie button {
@@ -415,6 +423,11 @@
     left: 0;
 }
 
+.popup-moblie.scroll {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
 .popup-moblie .search {
     width: 210px;
 }
@@ -479,6 +492,10 @@
     display: none;
 }
 
+.menu-moblie .li-moblie .list-menu-moblie.list-show {
+    display: block;
+}
+
 .menu-moblie .li-moblie .list-menu-moblie li {
     border-top: none;
     border-bottom: none;
@@ -513,6 +530,10 @@
     top: 0;
     transform: translateX(200%);
     transition: .2s ease-out;
+}
+
+.cart-modal-overlay.show-cart {
+    transform: translateX(0);
 }
 
 .cart-modal {

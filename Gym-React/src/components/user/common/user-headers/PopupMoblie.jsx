@@ -1,10 +1,22 @@
 import { faChevronDown, faMagnifyingGlass, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react'
+import React, { useState } from 'react'
 
 const PopupMoblie = ({ showPopup }) => {
+    const [isOpen, setIsOpen] = useState([false, false, false]);
+
+    const toggleMenu = (index) => {
+        const updatedState = [...isOpen];
+        updatedState[index] = !updatedState[index];
+        setIsOpen(updatedState);
+    };
+
+    // Kiểm tra nếu có ít nhất một menu mở
+    const isAnyMenuOpen = isOpen.some((open) => open);
+
     return (
-        <div className={`popup-mobile ${showPopup ? "show" : ""}`}>
+        <div
+            className={`popup-moblie ${showPopup ? "show" : ""} ${isAnyMenuOpen ? "scroll" : ""}`}>
             <div className="search">
                 <input type="text" placeholder="Bạn muốn tìm gì ?" />
                 <button>
@@ -27,10 +39,14 @@ const PopupMoblie = ({ showPopup }) => {
                         <a href="./producttittle.html?fashion=Nam">
                             ĐỒ TẬP NAM
                         </a>
-                        <i>
+                        <i onClick={() => toggleMenu(0)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
-                        <ul className="list-menu-moblie">
+                        <ul
+                            className={`list-menu-moblie ${
+                                isOpen[0] ? "list-show" : ""
+                            }`}
+                        >
                             <span>
                                 <a href="./producttittle.html?fashion=Nam&type=Áo">
                                     Áo Tập Nam
@@ -85,10 +101,14 @@ const PopupMoblie = ({ showPopup }) => {
                     </li>
                     <li className="li-moblie">
                         <a href="./producttittle.html?fashion=Nữ">ĐỒ TẬP NỮ</a>
-                        <i>
+                        <i onClick={() => toggleMenu(1)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
-                        <ul className="list-menu-moblie">
+                        <ul
+                            className={`list-menu-moblie ${
+                                isOpen[1] ? "list-show" : ""
+                            }`}
+                        >
                             <span>
                                 <a href="./producttittle.html?fashion=Nữ&type=Áo">
                                     Áo Tập Nữ
@@ -150,10 +170,14 @@ const PopupMoblie = ({ showPopup }) => {
                         <a href="./producttittle.html?fashion=Phụ kiện">
                             PHỤ KIỆN
                         </a>
-                        <i>
+                        <i onClick={() => toggleMenu(2)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
-                        <ul className="list-menu-moblie">
+                        <ul
+                            className={`list-menu-moblie ${
+                                isOpen[2] ? "list-show" : ""
+                            }`}
+                        >
                             <li>
                                 <a href="./producttittle.html?fashion=Phụ kiện&type=Thảm">
                                     Thảm Tập Yoga

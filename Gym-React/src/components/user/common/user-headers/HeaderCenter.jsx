@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 
-const HeaderCenter = ({handleIconClick}) => {
+const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
     return (
         <>
             <div className="header-main">
@@ -65,7 +65,10 @@ const HeaderCenter = ({handleIconClick}) => {
                                                 />
                                             </i>
                                         </span>
-                                        <span className="cart-btn">
+                                        <span
+                                            className="cart-btn"
+                                            onClick={cartOnClick}
+                                        >
                                             <i id="cart">
                                                 <FontAwesomeIcon
                                                     icon={faShoppingBasket}
@@ -92,7 +95,6 @@ const HeaderCenter = ({handleIconClick}) => {
                     </div>
                 </div>
             </div>
-            
         </>
     );
 };
