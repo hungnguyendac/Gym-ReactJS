@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
+import React from "react";
 import App from "./App.jsx";
+import "./assets/globalStyles.css";
 
-
-import GlobalStyles from "./components/global-styles/GlobalStyles.jsx";
 
 createRoot(document.getElementById("root")).render(
-    <GlobalStyles>
+    <React.StrictMode>
         <App />
-    </GlobalStyles>
+    </React.StrictMode>
 );

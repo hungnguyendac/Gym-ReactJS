@@ -225,7 +225,8 @@
     cursor: pointer;
     height: 32px;
     width: 32px;
-    line-height: 32px
+    line-height: 32px;
+    padding: 5px;
 }
 
 .icon-user .cart-btn .cart-quantity {
@@ -1130,6 +1131,11 @@
         display: block;
         cursor: pointer;
     }
+
+    .icon-user .cart-btn #cart {
+        padding: 0;
+    }
+
     .header-bottom {
         display: none;
     }

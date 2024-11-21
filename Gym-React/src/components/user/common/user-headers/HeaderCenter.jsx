@@ -8,6 +8,7 @@ import {
     faShoppingBasket,
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/faShoppingCart";
 
 
 const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
@@ -20,7 +21,7 @@ const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
                             <div className="wrap-main">
                                 <div className="wrap-1">
                                     <div className="logo">
-                                        <a href="./index.html">
+                                        <a href="/">
                                             <img src="/Logo.png" alt="Logo" />
                                         </a>
                                     </div>
@@ -72,7 +73,7 @@ const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
                                             <i id="cart">
                                                 <FontAwesomeIcon
                                                     icon={faShoppingBasket}
-                                                ></FontAwesomeIcon>
+                                                />
                                                 <span className="cart-quantity">
                                                     0
                                                 </span>

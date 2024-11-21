@@ -1,6 +1,7 @@
 import { faChevronDown, faMagnifyingGlass, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const PopupMoblie = ({ showPopup }) => {
     const [isOpen, setIsOpen] = useState([false, false, false]);
@@ -16,7 +17,10 @@ const PopupMoblie = ({ showPopup }) => {
 
     return (
         <div
-            className={`popup-moblie ${showPopup ? "show" : ""} ${isAnyMenuOpen ? "scroll" : ""}`}>
+            className={`popup-moblie ${showPopup ? "show" : ""} ${
+                isAnyMenuOpen ? "scroll" : ""
+            }`}
+        >
             <div className="search">
                 <input type="text" placeholder="Bạn muốn tìm gì ?" />
                 <button>
@@ -28,17 +32,17 @@ const PopupMoblie = ({ showPopup }) => {
             <div className="menu-moblie">
                 <ul>
                     <li>
-                        <a href="./index.html">TRANG CHỦ</a>
+                        <Link to="/">TRANG CHỦ</Link>
                     </li>
                     <li>
-                        <a href="./flashsale.html">
+                        <Link to="/flashsale">
                             <span>FLASH SALE</span>
-                        </a>
+                        </Link>
                     </li>
                     <li className="li-moblie">
-                        <a href="./producttittle.html?fashion=Nam">
+                        <Link to="/producttittle?fashion=Nam">
                             ĐỒ TẬP NAM
-                        </a>
+                        </Link>
                         <i onClick={() => toggleMenu(0)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
@@ -48,59 +52,59 @@ const PopupMoblie = ({ showPopup }) => {
                             }`}
                         >
                             <span>
-                                <a href="./producttittle.html?fashion=Nam&type=Áo">
+                                <Link to="/producttittle?fashion=Nam&type=Áo">
                                     Áo Tập Nam
-                                </a>
+                                </Link>
                             </span>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Áo thun">
+                                <Link to="/producttittle?fashion=Nam&type=Áo thun">
                                     Áo Thun
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Áo Polo">
+                                <Link to="/producttittle?fashion=Nam&type=Áo Polo">
                                     Áo Polo
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Áo ba lỗ">
+                                <Link to="/producttittle?fashion=Nam&type=Áo ba lỗ">
                                     Áo Tanktop - Ba Lỗ
-                                </a>
+                                </Link>
                             </li>
                             <span>
-                                <a href="./producttittle.html?fashion=Nam&type=Quần">
+                                <Link to="/producttittle?fashion=Nam&type=Quần">
                                     Quần Tập Nam
-                                </a>
+                                </Link>
                             </span>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Quần dài">
+                                <Link to="/producttittle?fashion=Nam&type=Quần dài">
                                     Quần Dài
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Quần đùi">
+                                <Link to="/producttittle?fashion=Nam&type=Quần đùi">
                                     Quần Đùi
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nam&type=Quần Jogger">
+                                <Link to="/producttittle?fashion=Nam&type=Quần Jogger">
                                     Quần Jogger
-                                </a>
+                                </Link>
                             </li>
                             <span>
-                                <a href="./producttittle.html?fashion=Nam&type=Áo khoác nam">
+                                <Link to="/producttittle?fashion=Nam&type=Áo khoác nam">
                                     Áo Khoác Thể Thao Nam
-                                </a>
+                                </Link>
                             </span>
                             <span>
-                                <a href="./producttittle.html?fashion=Nam&type=Set-tap">
+                                <Link to="/producttittle?fashion=Nam&type=Set-tap">
                                     Bộ Đồ Tập Nam
-                                </a>
+                                </Link>
                             </span>
                         </ul>
                     </li>
                     <li className="li-moblie">
-                        <a href="./producttittle.html?fashion=Nữ">ĐỒ TẬP NỮ</a>
+                        <Link to="/producttittle?fashion=Nữ">ĐỒ TẬP NỮ</Link>
                         <i onClick={() => toggleMenu(1)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
@@ -110,66 +114,66 @@ const PopupMoblie = ({ showPopup }) => {
                             }`}
                         >
                             <span>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo">
                                     Áo Tập Nữ
-                                </a>
+                                </Link>
                             </span>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo bra">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo bra">
                                     Áo Bra
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo thun">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo thun">
                                     Áo Thun
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo ba lỗ">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo ba lỗ">
                                     Áo Tanktop - Ba Lỗ
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo croptop">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo croptop">
                                     Áo Croptop
-                                </a>
+                                </Link>
                             </li>
                             <span>
-                                <a href="./producttittle.html?fashion=Nữ&type=Quần">
+                                <Link to="/producttittle?fashion=Nữ&type=Quần">
                                     Quần Tập Nữ
-                                </a>
+                                </Link>
                             </span>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Quần dài">
+                                <Link to="/producttittle?fashion=Nữ&type=Quần dài">
                                     Quần Dài
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Quần lửng">
+                                <Link to="/producttittle?fashion=Nữ&type=Quần lửng">
                                     Quần Lửng
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Nữ&type=Quần Jogger">
+                                <Link to="/producttittle?fashion=Nữ&type=Quần Jogger">
                                     Quần Jogger
-                                </a>
+                                </Link>
                             </li>
                             <span>
-                                <a href="./producttittle.html?fashion=Nữ&type=Áo khoác nữ">
+                                <Link to="/producttittle?fashion=Nữ&type=Áo khoác nữ">
                                     Áo Khoác Thể Thao Nữ
-                                </a>
+                                </Link>
                             </span>
                             <span>
-                                <a href="./producttittle.html?fashion=Nữ&type=Set-tap">
+                                <Link to="/producttittle?fashion=Nữ&type=Set-tap">
                                     Bộ Đồ Tập Nữ
-                                </a>
+                                </Link>
                             </span>
                         </ul>
                     </li>
                     <li className="li-moblie">
-                        <a href="./producttittle.html?fashion=Phụ kiện">
+                        <Link to="/producttittle?fashion=Phụ kiện">
                             PHỤ KIỆN
-                        </a>
+                        </Link>
                         <i onClick={() => toggleMenu(2)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>
@@ -179,50 +183,50 @@ const PopupMoblie = ({ showPopup }) => {
                             }`}
                         >
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Thảm">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Thảm">
                                     Thảm Tập Yoga
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Túi">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Túi">
                                     Túi Thể Thao
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Găng">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Găng">
                                     Găng Tay
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Băng">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Băng">
                                     Băng Bảo Vệ
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Dây nhảy">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Dây nhảy">
                                     Dây Nhảy
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Dây kháng lực">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Dây kháng lực">
                                     Dây Kháng Lực
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="./producttittle.html?fashion=Phụ kiện&type=Chăm sóc">
+                                <Link to="/producttittle?fashion=Phụ kiện&type=Chăm sóc">
                                     Chăm sóc cơ bắp
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </li>
                     <li className="li-moblie">
-                        <a href="./shop.html">CỬA HÀNG</a>
+                        <Link to="/shop">CỬA HÀNG</Link>
                     </li>
                     <li>
-                        <a href="./tintuc.html">SỰ KIỆN</a>
+                        <Link to="/tintuc">SỰ KIỆN</Link>
                     </li>
                     <li className="li-moblie">
-                        <a href="./bai-tap-gym.html">BÀI TẬP GYM</a>
+                        <Link to="/bai-tap-gym">BÀI TẬP GYM</Link>
                     </li>
                 </ul>
             </div>
@@ -234,7 +238,7 @@ const PopupMoblie = ({ showPopup }) => {
                     </i>
                 </div>
                 <div className="hotline-tittle">
-                    <a href="tel:+0902 77 1186">0902 77 1186</a>
+                    <Link to="tel:+0902 77 1186">0902 77 1186</Link>
                     <p>Hotline đặt hàng</p>
                 </div>
             </div>

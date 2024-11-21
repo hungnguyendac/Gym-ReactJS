@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
+const SaleProduct = ({product}) => {
 
-    let gia = product.price.toLocaleString("vi-VN");
+    let giaGoc = product.initialPrice;
+    let giaGiam = product.price;
+    let percent = Math.ceil(((giaGoc - giaGiam) / giaGoc) * 100);
+
+    // Chuyển đổi giá trị thành chuỗi với định dạng tiền tệ
+    let giaGocFormatted = giaGoc.toLocaleString("vi-VN");
+    let giaGiamFormatted = giaGiam.toLocaleString("vi-VN");
+
     return (
         <div className="col-6 col-sm-4 col-md-3">
             <div className="product">
@@ -24,10 +31,16 @@ const ProductCard = ({ product }) => {
                 <Link to={`/productdetail/${product.id}`}>
                     <h3>{product.name}</h3>
                 </Link>
-                <p>{gia} VNĐ</p>
+                <p>
+                    <span>{giaGocFormatted}VNĐ</span>
+                    {giaGiamFormatted}VNĐ
+                </p>
+                <div className="circle">
+                    <p>{percent}%</p>
+                </div>
             </div>
         </div>
     );
 };
 
-export default ProductCard;
+export default SaleProduct;

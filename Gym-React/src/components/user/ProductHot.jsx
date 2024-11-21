@@ -2,6 +2,7 @@ import React from "react";
 import useCallApi from "../../hooks/useCallApi";
 import ProductCard from "./common/ProductCard";
 import { urlProducts } from "../../untils/variable";
+import { Link } from "react-router-dom";
 
 const ProductHot = () => {
     const { data, isLoading } = useCallApi(urlProducts);
@@ -26,9 +27,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="tittle-product">
-                                <a href="./producttittle.html?fashion=Nam">
+                                <Link to="/producttittle?fashion=Nam">
                                     ĐỒ TẬP GYM NAM
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -48,9 +49,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="xem-them">
-                                <a href="./producttittle.html?fashion=Nam">
+                                <Link to="/producttittle?fashion=Nam">
                                     Xem tất cả
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -60,9 +61,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="tittle-product">
-                                <a href="./producttittle.html?fashion=Nữ">
+                                <Link to="/producttittle?fashion=Nữ">
                                     ĐỒ TẬP GYM NỮ
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -82,9 +83,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="xem-them">
-                                <a href="./producttittle.html?fashion=Nữ">
+                                <Link to="/producttittle?fashion=Nữ">
                                     Xem tất cả
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -94,9 +95,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="tittle-product">
-                                <a href="./producttittle.html?fashion=Phụ kiện">
+                                <Link to="/producttittle?fashion=Phụ kiện">
                                     PHỤ KIỆN TẬP
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -116,9 +117,9 @@ const ProductHot = () => {
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
                             <div className="xem-them">
-                                <a href="./producttittle.html?fashion=Phụ kiện">
+                                <Link to="/producttittle?fashion=Phụ kiện">
                                     Xem tất cả
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

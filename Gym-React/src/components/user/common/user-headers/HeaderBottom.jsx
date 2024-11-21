@@ -1,6 +1,7 @@
 import { faAngleRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const HeaderBottom = () => {
   return (
@@ -10,20 +11,20 @@ const HeaderBottom = () => {
                   <div className="col-12 col-sm-12 col-md-12">
                       <ul className="menu-main">
                           <li>
-                              <a href="./index.html">TRANG CHỦ</a>
+                              <Link to="/">TRANG CHỦ</Link>
                           </li>
                           <li>
-                              <a href="./flashsale.html">
+                              <Link to="/flashsale">
                                   <span>FLASH SALE</span>
-                              </a>
+                              </Link>
                           </li>
                           <li>
-                              <a href="./producttittle.html?fashion=Nam">
+                              <Link to="/producttittle?fashion=Nam">
                                   ĐỒ TẬP NAM
                                   <i>
                                       <FontAwesomeIcon icon={faChevronDown} />
                                   </i>
-                              </a>
+                              </Link>
                               <ul className="sub-menu">
                                   <div className="menu-c1">
                                       <li>
@@ -32,11 +33,11 @@ const HeaderBottom = () => {
                                       <span>
                                           <hr />
                                       </span>
-                                      <a href="./producttittle.html?fashion=Nam&type=Áo">
+                                      <Link to="/producttittle?fashion=Nam&type=Áo">
                                           <li>Áo Tập Nam</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Áo thun">
+                                      <Link to="/producttittle?fashion=Nam&type=Áo thun">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -45,9 +46,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Thun
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Áo Polo">
+                                      <Link to="/producttittle?fashion=Nam&type=Áo Polo">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -56,9 +57,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Polo
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Áo ba lỗ">
+                                      <Link to="/producttittle?fashion=Nam&type=Áo ba lỗ">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -67,12 +68,12 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Tanktop - Ba Lỗ
                                           </li>
-                                      </a>
-                                      <a href="./producttittle.html?fashion=Nam&type=Quần">
+                                      </Link>
+                                      <Link to="/producttittle?fashion=Nam&type=Quần">
                                           <li>Quần Tập Nam</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Quần dài">
+                                      <Link to="/producttittle?fashion=Nam&type=Quần dài">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -81,9 +82,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Dài
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Quần đùi">
+                                      <Link to="/producttittle?fashion=Nam&type=Quần đùi">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -92,9 +93,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Đùi
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Quần Jogger">
+                                      <Link to="/producttittle?fashion=Nam&type=Quần Jogger">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -103,25 +104,25 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Jogger
                                           </li>
-                                      </a>
-                                      <a href="./producttittle.html?type=Áo khoác nam">
+                                      </Link>
+                                      <Link to="/producttittle?type=Áo khoác nam">
                                           <li>Áo Khoác Thể Thao Nam</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nam&type=Set-tap">
+                                      <Link to="/producttittle?fashion=Nam&type=Set-tap">
                                           <li>Bộ Đồ Tập Nam</li>
-                                      </a>
+                                      </Link>
                                   </div>
                                   <img src="/TheThaoNam.jpg" alt="Anh" />
                               </ul>
                           </li>
                           <li>
-                              <a href="./producttittle.html?fashion=Nữ">
+                              <Link to="/producttittle?fashion=Nữ">
                                   ĐỒ TẬP NỮ
                                   <i>
                                       <FontAwesomeIcon icon={faChevronDown} />
                                   </i>
-                              </a>
+                              </Link>
                               <ul className="sub-menu">
                                   <div className="menu-c1">
                                       <li>
@@ -130,11 +131,11 @@ const HeaderBottom = () => {
                                       <span>
                                           <hr />
                                       </span>
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo">
                                           <li>Áo Tập Nữ</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo bra">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo bra">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -143,9 +144,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Bra
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo thun">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo thun">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -154,9 +155,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Thun
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo ba lỗ">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo ba lỗ">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -165,9 +166,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Tanktop - Ba Lỗ
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo croptop">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo croptop">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -176,13 +177,13 @@ const HeaderBottom = () => {
                                               </i>
                                               Áo Croptop
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Quần">
+                                      <Link to="/producttittle?fashion=Nữ&type=Quần">
                                           <li>Quần Tập Nữ</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Quần dài">
+                                      <Link to="/producttittle?fashion=Nữ&type=Quần dài">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -191,9 +192,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Dài
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Quần lửng">
+                                      <Link to="/producttittle?fashion=Nữ&type=Quần lửng">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -202,9 +203,9 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Lửng
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Quần Jogger">
+                                      <Link to="/producttittle?fashion=Nữ&type=Quần Jogger">
                                           <li>
                                               <i>
                                                   <FontAwesomeIcon
@@ -213,58 +214,58 @@ const HeaderBottom = () => {
                                               </i>
                                               Quần Jogger
                                           </li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Áo khoác nữ">
+                                      <Link to="/producttittle?fashion=Nữ&type=Áo khoác nữ">
                                           <li>Áo Khoác Thể Thao Nữ</li>
-                                      </a>
+                                      </Link>
                                       <hr />
-                                      <a href="./producttittle.html?fashion=Nữ&type=Set-tap">
+                                      <Link to="/producttittle?fashion=Nữ&type=Set-tap">
                                           <li>Bộ Đồ Tập Nữ</li>
-                                      </a>
+                                      </Link>
                                   </div>
                                   <img src="/DoTapNu.jpg" alt="Anh" />
                               </ul>
                           </li>
                           <li className="menu-2">
-                              <a href="./producttittle.html?fashion=Phụ kiện">
+                              <Link to="/producttittle?fashion=Phụ kiện">
                                   PHỤ KIỆN
                                   <i>
                                       <FontAwesomeIcon icon={faChevronDown} />
                                   </i>
-                              </a>
+                              </Link>
                               <ul className="sub-menu-2">
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Thảm">
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Thảm">
                                       <li>Thảm Tập Yoga</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Túi">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Túi">
                                       <li>Túi Thể Thao</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Găng">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Găng">
                                       <li>Găng Tay</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Băng">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Băng">
                                       <li>Băng Bảo Vệ</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Dây nhảy">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Dây nhảy">
                                       <li>Dây Nhảy</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Dây kháng lực">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Dây kháng lực">
                                       <li>Dây Kháng Lực</li>
-                                  </a>
-                                  <a href="./producttittle.html?fashion=Phụ kiện&type=Chăm sóc">
+                                  </Link>
+                                  <Link to="/producttittle?fashion=Phụ kiện&type=Chăm sóc">
                                       <li>Chăm Sóc Cơ Bắp</li>
-                                  </a>
+                                  </Link>
                               </ul>
                           </li>
                           <li className="menu-2">
-                              <a href="./shop.html"> CỬA HÀNG </a>
+                              <Link to="/shop"> CỬA HÀNG </Link>
                           </li>
                           <li>
-                              <a href="./tintuc.html">SỰ KIỆN</a>
+                              <Link to="/tintuc">SỰ KIỆN</Link>
                           </li>
                           <li className="menu-2">
-                              <a href="./bai-tap-gym.html"> BÀI TẬP GYM </a>
+                              <Link to="/bai-tap-gym"> BÀI TẬP GYM </Link>
                           </li>
                       </ul>
                   </div>
