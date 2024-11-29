@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBars,
@@ -8,10 +8,18 @@ import {
     faShoppingBasket,
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons/faShoppingCart";
+import { CartContext } from "../../../../context/CartContext";
+
 
 
 const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
+
+    const { cart} = useContext(CartContext);
+
+    const getTotalQuantity = () => {
+        return cart.reduce((total, item) => total + item.quantity, 0);
+    };
+
     return (
         <>
             <div className="header-main">
@@ -75,7 +83,7 @@ const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
                                                     icon={faShoppingBasket}
                                                 />
                                                 <span className="cart-quantity">
-                                                    0
+                                                    {getTotalQuantity()}
                                                 </span>
                                             </i>
                                         </span>

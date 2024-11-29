@@ -6,6 +6,7 @@ import LayoutUser from "./pages/user/LayoutUser";
 import FlashSale from "./pages/user/FlashSale";
 import ProductTittle from "./pages/user/ProductTittle";
 import ProductDetail from "./pages/user/ProductDetail";
+import ChiTietGioHang from "./pages/user/ChiTietGioHang";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
                     <Route path="/flashsale" element={<FlashSale/>}/>
                     <Route path="/producttittle" element={<ProductTittle/>}/>
                     <Route path="/productdetail/:id" element={<ProductDetail/>}/>
+                    <Route path="/gio-hang" element={<ChiTietGioHang/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

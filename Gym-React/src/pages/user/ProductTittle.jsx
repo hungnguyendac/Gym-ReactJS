@@ -84,7 +84,7 @@ const ProductTittle = () => {
                                 {filterProducts.length > 0 ? (
                                     filterProducts.map((product) => {
                                         return (
-                                            <ProductCard product={product} />
+                                            <ProductCard product={product} key={product.id}/>
                                         );
                                     })
                                 ) : (
