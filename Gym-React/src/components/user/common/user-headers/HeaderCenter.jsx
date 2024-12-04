@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBars,
@@ -9,6 +9,7 @@ import {
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../../../context/CartContext";
+import useSearch from "../../../../hooks/useSearch";
 
 
 
@@ -19,6 +20,9 @@ const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
     const getTotalQuantity = () => {
         return cart.reduce((total, item) => total + item.quantity, 0);
     };
+
+    // Chức năng tìm kiếm
+    const { searchQuery, setSearchQuery, handleSearch } = useSearch();
 
     return (
         <>
@@ -37,8 +41,10 @@ const HeaderCenter = ({ handleIconClick, cartOnClick }) => {
                                         <input
                                             type="text"
                                             placeholder="Bạn muốn tìm gì ?"
+                                            value={searchQuery}
+                                            onChange={(e) => setSearchQuery(e.target.value)}
                                         />
-                                        <button>
+                                        <button onClick={handleSearch}>
                                             <i>
                                                 <FontAwesomeIcon
                                                     icon={faMagnifyingGlass}

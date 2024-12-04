@@ -15,6 +15,7 @@ const DetailProduct = ({data}) => {
     const addToCart = () => {
         dispatch({ type: "ADD_TO_CART", payload: { ...data, quantity } });
     };
+    
 
     return (
         <>
@@ -22,7 +23,9 @@ const DetailProduct = ({data}) => {
                 <div className="product-detail-tittle">
                     <h3 className="name-product">{data.name}</h3>
                     <hr />
-                    <h3 className="product-price">{data.price} VNĐ</h3>
+                    <h3 className="product-price">
+                        {data.price} VNĐ
+                    </h3>
                     <ul>
                         <li>
                             <b>Chất liệu</b>: {data.tittle}

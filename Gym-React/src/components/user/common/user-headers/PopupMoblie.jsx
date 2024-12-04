@@ -2,6 +2,7 @@ import { faChevronDown, faMagnifyingGlass, faPhoneSquare } from '@fortawesome/fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import useSearch from '../../../../hooks/useSearch';
 
 const PopupMoblie = ({ showPopup }) => {
     const [isOpen, setIsOpen] = useState([false, false, false]);
@@ -11,6 +12,9 @@ const PopupMoblie = ({ showPopup }) => {
         updatedState[index] = !updatedState[index];
         setIsOpen(updatedState);
     };
+
+    // Chức năng tìm kiếm
+    const { searchQuery, setSearchQuery, handleSearch } = useSearch();
 
     // Kiểm tra nếu có ít nhất một menu mở
     const isAnyMenuOpen = isOpen.some((open) => open);
@@ -22,8 +26,13 @@ const PopupMoblie = ({ showPopup }) => {
             }`}
         >
             <div className="search">
-                <input type="text" placeholder="Bạn muốn tìm gì ?" />
-                <button>
+                <input
+                    type="text"
+                    placeholder="Bạn muốn tìm gì ?"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button onClick={handleSearch}>
                     <i>
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </i>
@@ -40,9 +49,7 @@ const PopupMoblie = ({ showPopup }) => {
                         </Link>
                     </li>
                     <li className="li-moblie">
-                        <Link to="/producttittle?fashion=Nam">
-                            ĐỒ TẬP NAM
-                        </Link>
+                        <Link to="/producttittle?fashion=Nam">ĐỒ TẬP NAM</Link>
                         <i onClick={() => toggleMenu(0)}>
                             <FontAwesomeIcon icon={faChevronDown} />
                         </i>

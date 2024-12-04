@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const DetailTop = ({data}) => {
+ 
+    
     return (
         <>
             <div className="col-12 col-sm-12 col-md-12">
                 <p>
                     <Link to="/">Trang chủ</Link> /
-                    <Link to="producttittle.html?fashion=${product.fashion}">
-                        Đồ tập
+                    <Link to={`/producttittle?fashion=${data.fashion}`}>
+                        Đồ tập {data.fashion}
                     </Link>{" "}
                     /
-                    <Link to="producttittle.html?fashion=${product.fashion}&type=${product.type}">
-                        ???????
-                    </Link>
+                    <Link to={`/productdetail/${data.id}`}>{data.name}</Link>
                 </p>
             </div>
 

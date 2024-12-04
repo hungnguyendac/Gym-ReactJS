@@ -1,17 +1,46 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "../../assets/giohang.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const ChiTietGioHang = () => {
-    const { cart } = useContext(CartContext);
+    const { cart, dispatch } = useContext(CartContext);
 
     const getTotalPrice = () => {
         return cart.reduce(
             (total, item) => total + item.quantity * item.price,
             0
         );
+    };
+
+    let gia = getTotalPrice();
+    let tong = gia + 20000;
+
+    let giaFormatted = gia.toLocaleString();
+    let tongFormatted = tong.toLocaleString();
+
+    // Hàm giảm số lượng
+    const decreaseQuantity = (item) => {
+        if (item.quantity > 1) {
+            dispatch({
+                type: "UPDATE_QUANTITY",
+                payload: { id: item.id, quantity: item.quantity - 1 },
+            });
+        }
+    };
+
+    // Hàm tăng số lượng
+    const increaseQuantity = (item) => {
+        dispatch({
+            type: "UPDATE_QUANTITY",
+            payload: { id: item.id, quantity: item.quantity + 1 },
+        });
+    };
+
+    const removeFromCart = (id) => {
+        dispatch({ type: "REMOVE_FROM_CART", payload: { id } });
     };
 
     return (
@@ -39,9 +68,15 @@ const ChiTietGioHang = () => {
                                     <tbody className="cart-product-tittle-js">
                                         {cart.map((product) => {
                                             return (
-                                                <tr>
+                                                <tr key={product.id}>
                                                     <td className="cart-product">
-                                                        <i>
+                                                        <i
+                                                            onClick={() =>
+                                                                removeFromCart(
+                                                                    product.id
+                                                                )
+                                                            }
+                                                        >
                                                             <FontAwesomeIcon
                                                                 icon={
                                                                     faTimesCircle
@@ -55,9 +90,11 @@ const ChiTietGioHang = () => {
                                                             alt="abc"
                                                         />
                                                         <span>
-                                                            <a href="">
+                                                            <Link
+                                                                to={`/productdetail/${product.id}`}
+                                                            >
                                                                 {product.name}
-                                                            </a>
+                                                            </Link>
                                                         </span>
                                                     </td>
                                                     <td className="cart-price">
@@ -65,7 +102,14 @@ const ChiTietGioHang = () => {
                                                         VNĐ
                                                     </td>
                                                     <td className="quantity-input">
-                                                        <button className="quantity-button">
+                                                        <button
+                                                            className="quantity-button"
+                                                            onClick={() =>
+                                                                decreaseQuantity(
+                                                                    product
+                                                                )
+                                                            }
+                                                        >
                                                             -
                                                         </button>
                                                         <input
@@ -76,13 +120,19 @@ const ChiTietGioHang = () => {
                                                             }
                                                             readOnly=""
                                                         />
-                                                        <button className="quantity-button">
+                                                        <button
+                                                            className="quantity-button"
+                                                            onClick={() =>
+                                                                increaseQuantity(
+                                                                    product
+                                                                )
+                                                            }
+                                                        >
                                                             +
                                                         </button>
                                                     </td>
                                                     <td className="cart-price cart-price-last">
-                                                        {getTotalPrice().toLocaleString()}{" "}
-                                                        VNĐ
+                                                        {giaFormatted} VNĐ
                                                     </td>
                                                 </tr>
                                             );
@@ -91,7 +141,9 @@ const ChiTietGioHang = () => {
                                 </table>
                                 <span className="button-back">
                                     <i className="fa-solid fa-arrow-left-long" />
-                                    <a href="">Tiếp tục xem sản phẩm</a>
+                                    <Link to="/producttittle">
+                                        Tiếp tục xem sản phẩm
+                                    </Link>
                                 </span>
                             </div>
                         </div>
@@ -101,7 +153,7 @@ const ChiTietGioHang = () => {
                                 <div className="cart-item">
                                     <span className="item-label">Tạm tính</span>
                                     <span className="item-value">
-                                        295,000VNĐ
+                                        {giaFormatted} VNĐ
                                     </span>
                                 </div>
                                 <div className="cart-item">
@@ -109,13 +161,12 @@ const ChiTietGioHang = () => {
                                         Phí Giao Hàng
                                     </span>
                                     <span className="item-value">
-                                        20,000VNĐ
+                                        20.000 VNĐ
                                     </span>
                                 </div>
                                 <div className="cart-total">
-                                    <span className="total-label">Tổng</span>
                                     <span className="total-value">
-                                        315,000VNĐ
+                                        Tổng {tongFormatted} VNĐ
                                     </span>
                                 </div>
                                 <button className="checkout-button">

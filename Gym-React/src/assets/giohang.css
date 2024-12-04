@@ -126,6 +126,7 @@ tbody .cart-product-tittle {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
 .cart-header {
     font-weight: bold;
     margin-bottom: 16px;
@@ -199,6 +200,7 @@ tbody .cart-product-tittle {
 .apply-button:hover {
     background-color: #7CB342;
 }
+
 
 
 @media screen and (max-width: 785px) {
