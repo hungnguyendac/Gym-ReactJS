@@ -16,10 +16,18 @@ const Search = () => {
         <div className="products">
             <div className="container">
                 <div className="row">
-
-                    {filteredProducts.map((product) => (
-                        <ProductCard key={product.id} product={product}/>
-                    ))}
+                    {filteredProducts.length > 0 ? (
+                        filteredProducts.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))
+                    ) : (
+                        <div className="no-results">
+                            <p>
+                                Không tìm thấy sản phẩm nào phù hợp với từ khóa
+                                "{query}".
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

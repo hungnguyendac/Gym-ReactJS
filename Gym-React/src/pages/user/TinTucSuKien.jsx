@@ -1,15 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TinTuc = () => {
+const TinTucSuKien = () => {
     return (
         <>
-            {/* -------------------- Tin tức nổi bật -------------------------*/}
-            <div className="title-main">
+            <div
+                className="tin-tuc"
+                style={{
+                    marginTop: "30px",
+                    marginBottom: "30px",
+                    width: "100%",
+                }}
+            >
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-sm-12 col-md-12">
-                            <h2>TIN TỨC NỔI BẬT</h2>
+                            <h4 style={{ textAlign: "center" }}>
+                                CHUYÊN MỤC: TIN TỨC - SỰ KIỆN
+                            </h4>
                         </div>
                     </div>
                 </div>
@@ -18,7 +26,7 @@ const TinTuc = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 col-sm-6 col-md-4">
-                            <a href="#">
+                            <Link to="#">
                                 <div className="card">
                                     <img
                                         src="/truoc-tap-gym-nen-an-gi-de-tang-can.jpg"
@@ -37,10 +45,10 @@ const TinTuc = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-12 col-sm-6 col-md-4">
-                            <a href="#">
+                            <Link to="#">
                                 <div className="card">
                                     <img
                                         src="/dau-hat-lanh.jpg"
@@ -59,10 +67,10 @@ const TinTuc = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-12 col-sm-6 col-md-4">
-                            <a href="#">
+                            <Link to="#">
                                 <div className="card">
                                     <img
                                         src="/tap-gym-cuong-do-cao.jpg"
@@ -82,12 +90,7 @@ const TinTuc = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div className="col-12 col-sm-12 col-md-12">
-                            <div className="xem-them">
-                                <Link to="/tintuc">Xem tất cả</Link>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -96,4 +99,4 @@ const TinTuc = () => {
     );
 };
 
-export default TinTuc;
+export default TinTucSuKien;

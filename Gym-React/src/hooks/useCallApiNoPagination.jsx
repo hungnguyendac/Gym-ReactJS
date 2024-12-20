@@ -1,7 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-const useCallApiNoPagination = ( urlProducts, itemsPerPage = 5) => {
+const useCallApiNoPagination = (urlProducts, itemsPerPage = 5) => {
     // const data = products;
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);

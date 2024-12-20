@@ -170,7 +170,9 @@ const ChiTietGioHang = () => {
                                     </span>
                                 </div>
                                 <button className="checkout-button">
-                                    TIẾN HÀNH THANH TOÁN
+                                    <Link to="/payment">
+                                        TIẾN HÀNH THANH TOÁN
+                                    </Link>
                                 </button>
                                 <div className="discount-section">
                                     <div className="discount-label">

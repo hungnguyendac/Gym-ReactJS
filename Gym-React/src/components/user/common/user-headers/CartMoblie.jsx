@@ -66,7 +66,7 @@ const CartMoblie = ({ showCart, cartOnClick }) => {
                                 <Link to="/gio-hang" className="btn btn-cart">
                                     XEM GIỎ HÀNG
                                 </Link>
-                                <Link to="" className="btn btn-checkout">
+                                <Link to="/payment" className="btn btn-checkout">
                                     THANH TOÁN
                                 </Link>
                             </div>

@@ -170,6 +170,11 @@ tbody .cart-product-tittle {
     margin-bottom: 16px;
 }
 
+.checkout-button a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .checkout-button:hover {
     background-color: #7CB342;
 }

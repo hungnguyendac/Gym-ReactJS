@@ -1,0 +1,15 @@
+h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.card {
+  border: 1px solid #ccc;
+}
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.card-body .card-body-product {
+  font-size: 14px;
+}
