@@ -50,7 +50,7 @@ const FlashSale = () => {
                 </div>
             </div>
             <Sale gia={119} gioitinh={"Nam"} />
-            <div className="products">
+            <div className="products product-salee">
                 <div className="container">
                     <div className="row products-female-js">
                         {maleSaleProducts.map((product) => {
